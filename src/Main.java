@@ -1,5 +1,3 @@
-import javax.sound.midi.Soundbank;
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
@@ -47,15 +45,18 @@ public class Main {
                     double deposito = scan.nextDouble();
                     System.out.println(" Depositando " + deposito + "...");
                     saldo = saldo + deposito;
+                    System.out.println(" Seu saldo agora é: " + saldo);
                     break;
                 case 3:
                     System.out.println(" Insira a quantia que deseja sacar: ");
                     double sacar = scan.nextDouble();
                     if (sacar > saldo) {
                         System.out.println(" Você não tem saldo suficiente para este saque.");
+                        System.out.println(" Seu saldo é: " + saldo);
                     } else {
                     System.out.println(" Sacando " + sacar + "...");
                     saldo = saldo - sacar;
+                    System.out.println(" Seu saldo agora é: " + saldo);
                     }
                     break;
                 case 4:
